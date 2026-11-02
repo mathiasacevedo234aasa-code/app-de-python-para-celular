@@ -9,7 +9,9 @@ version = 1.0.0
 
 # Solo recetas compiladas. Las librerías de Python puro (pygments, requests...)
 # se copian a vendor/ en el workflow, porque el pip interno de p4a falla al instalarlas.
-requirements = python3,kivy==2.3.1
+requirements = python3,kivy==2.3.0
+# Versión estable de python-for-android (la rama de desarrollo usa Python 3.14 y falla)
+p4a.branch = v2024.01.21
 
 orientation = portrait
 fullscreen = 0
