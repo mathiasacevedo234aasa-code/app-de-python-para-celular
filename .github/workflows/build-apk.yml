@@ -35,6 +35,9 @@ jobs:
             .buildozer
           key: buildozer-${{ hashFiles('buildozer.spec') }}
 
+      - name: Incluir librerías de Python puro
+        run: pip install --no-compile --target vendor pygments requests
+
       - name: Compilar APK (debug)
         run: |
           set -o pipefail

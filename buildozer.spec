@@ -3,13 +3,13 @@ title = PyStudio
 package.name = pystudio
 package.domain = org.pystudio
 source.dir = .
-source.include_exts = py,png,jpg,kv,json,txt
+source.include_exts = py,png,jpg,kv,json,txt,pem
 source.exclude_dirs = bin,.buildozer,.github,__pycache__
 version = 1.0.0
 
-# Librerías que el usuario podrá importar dentro de la app.
-# Agrega aquí otras con receta de python-for-android (ej: numpy, requests, pillow).
-requirements = python3,kivy==2.3.1,pygments,requests,certifi,charset-normalizer,idna,urllib3
+# Solo recetas compiladas. Las librerías de Python puro (pygments, requests...)
+# se copian a vendor/ en el workflow, porque el pip interno de p4a falla al instalarlas.
+requirements = python3,kivy==2.3.1
 
 orientation = portrait
 fullscreen = 0

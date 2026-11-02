@@ -6,6 +6,7 @@ import time
 
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
 # La capa compatible de tkinter vive en compat/tkinter y debe tener prioridad.
+sys.path.insert(0, os.path.join(APP_DIR, "vendor"))  # librerías de Python puro empaquetadas
 sys.path.insert(0, os.path.join(APP_DIR, "compat"))
 sys.path.insert(0, APP_DIR)
 
